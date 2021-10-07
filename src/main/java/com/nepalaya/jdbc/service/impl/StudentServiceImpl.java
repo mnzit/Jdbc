@@ -2,6 +2,7 @@ package com.nepalaya.jdbc.service.impl;
 
 import com.nepalaya.jdbc.builder.ResponseBuilder;
 import com.nepalaya.jdbc.dao.StudentDAO;
+import com.nepalaya.jdbc.dao.impl.StudentDAODatabaseImpl;
 import com.nepalaya.jdbc.dao.impl.StudentDAOMemoryImpl;
 import com.nepalaya.jdbc.model.Student;
 import com.nepalaya.jdbc.response.Response;
@@ -11,7 +12,7 @@ import java.util.List;
 
 public class StudentServiceImpl implements StudentService {
 
-    private StudentDAO studentDAO = new StudentDAOMemoryImpl();
+    private StudentDAO studentDAO = new StudentDAODatabaseImpl();
 
     @Override
     public Response add(Student student) {

@@ -18,4 +18,5 @@ public class Response implements Serializable {
     private String message;
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private Object data;
+
 }

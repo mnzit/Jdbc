@@ -20,5 +20,7 @@ public class Student implements Serializable {
     private Date dob;
     private String address;
     private String contactNo;
+    private Date createdDate;
+    private Boolean status;
 
 }
