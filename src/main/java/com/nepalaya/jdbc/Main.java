@@ -63,8 +63,8 @@ public class Main {
 //        Response getByIdResponse = studentService.getById(1L);
 //        System.out.println(JacksonUtil.toJson(getByIdResponse));
 
-//        Response studentAllResponse = studentService.getAll();
-//        System.out.println(JacksonUtil.toJson(studentAllResponse));
+        Response studentAllResponse = studentService.getAll();
+        System.out.println(JacksonUtil.toJson(studentAllResponse));
 
         ExceptionHandler.handle(() -> {
 
@@ -74,13 +74,16 @@ public class Main {
 //            System.out.println(JacksonUtil.toJson(studentOneResponse));
 
 //            new Student(1L, "Nabin Shrestha", DateUtil.formatDate("1998-03-31", "yyyy-MM-dd"), "Birtamod", "9801111111")
-            Student student = Student
-                    .builder()
-                    .id(1L)
-                    .name("Anita Joshi")
-                    .build();
-            Response studentUpdate = studentService.update(student);
-            System.out.println(JacksonUtil.toJson(studentUpdate));
+//            Student student = Student
+//                    .builder()
+//                    .id(1L)
+//                    .name("Anita Joshi")
+//                    .build();
+//            Response studentUpdate = studentService.update(student);
+//            System.out.println(JacksonUtil.toJson(studentUpdate));
+
+//            Response studentDelete = studentService.delete(2L);
+//            System.out.println(JacksonUtil.toJson(studentDelete));
         });
     }
 }

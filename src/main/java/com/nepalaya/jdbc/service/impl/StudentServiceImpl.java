@@ -40,7 +40,14 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public Response delete(Long id) {
-        return null;
+        Response response = null;
+        try {
+            studentDAO.delete(id);
+            response = ResponseBuilder.success("Student Deleted Successfully !");
+        } catch (Exception ex) {
+            response = ResponseBuilder.failure(ex.getMessage());
+        }
+        return response;
     }
 
     @Override
