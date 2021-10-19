@@ -76,8 +76,6 @@ public class StudentDAOMemoryImpl implements StudentDAO {
 
     @Override
     public Student getById(Long id) throws Exception {
-
-
         Optional<Student> optionalStudent = students
                 .stream()
                 .filter(getStudentPredicate(id))

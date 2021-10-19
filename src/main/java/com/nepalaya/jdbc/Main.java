@@ -1,8 +1,11 @@
 package com.nepalaya.jdbc;
 
+import com.nepalaya.jdbc.exception.ExceptionHandler;
+import com.nepalaya.jdbc.model.Student;
 import com.nepalaya.jdbc.response.Response;
 import com.nepalaya.jdbc.service.StudentService;
 import com.nepalaya.jdbc.service.impl.StudentServiceImpl;
+import com.nepalaya.jdbc.util.DateUtil;
 import com.nepalaya.jdbc.util.JacksonUtil;
 
 public class Main {
@@ -60,7 +63,24 @@ public class Main {
 //        Response getByIdResponse = studentService.getById(1L);
 //        System.out.println(JacksonUtil.toJson(getByIdResponse));
 
-        Response studentAllResponse = studentService.getAll();
-        System.out.println(JacksonUtil.toJson(studentAllResponse));
+//        Response studentAllResponse = studentService.getAll();
+//        System.out.println(JacksonUtil.toJson(studentAllResponse));
+
+        ExceptionHandler.handle(() -> {
+
+//            Response studentAddResponse = studentService.add(new Student("Nawaraj Shrestha", DateUtil.formatDate("1998-03-31", "yyyy-MM-dd"), "Biratnagar", "980111111"));
+//            System.out.println(JacksonUtil.toJson(studentAddResponse));
+//            Response studentOneResponse = studentService.getById(6L);
+//            System.out.println(JacksonUtil.toJson(studentOneResponse));
+
+//            new Student(1L, "Nabin Shrestha", DateUtil.formatDate("1998-03-31", "yyyy-MM-dd"), "Birtamod", "9801111111")
+            Student student = Student
+                    .builder()
+                    .id(1L)
+                    .name("Anita Joshi")
+                    .build();
+            Response studentUpdate = studentService.update(student);
+            System.out.println(JacksonUtil.toJson(studentUpdate));
+        });
     }
 }
