@@ -2,7 +2,7 @@
 # A fatal error has been detected by the Java Runtime Environment:
 #
 #  Internal Error (method.cpp:1805), pid=85873, tid=7683
-#  fatal error: no original bytecode found in com.nepalaya.jdbc.service.impl.StudentServiceImpl.getAll()Lcom/nepalaya/jdbc/response/Response; at bci 22
+#  fatal error: no original bytecode found in com.nepalaya.jdbcdemo.service.impl.StudentServiceImpl.getAll()Lcom/nepalaya/jdbc/response/Response; at bci 22
 #
 # JRE version: OpenJDK Runtime Environment GraalVM CE 21.2.0 (11.0.12+6) (build 11.0.12+6-jvmci-21.2-b08)
 # Java VM: OpenJDK 64-Bit Server VM GraalVM CE 21.2.0 (11.0.12+6-jvmci-21.2-b08, mixed mode, sharing, tiered, jvmci, jvmci compiler, compressed oops, g1 gc, bsd-amd64)
@@ -14,7 +14,7 @@
 
 ---------------  S U M M A R Y ------------
 
-Command Line: -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCIProduct -XX:-UnlockExperimentalVMOptions -XX:ThreadPriorityPolicy=1 -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:64697,suspend=y,server=n -javaagent:/Users/manjitshakya/Library/Caches/JetBrains/IntelliJIdea2021.2/captureAgent/debugger-agent.jar -Dfile.encoding=UTF-8 com.nepalaya.jdbc.StudentController
+Command Line: -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCIProduct -XX:-UnlockExperimentalVMOptions -XX:ThreadPriorityPolicy=1 -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:64697,suspend=y,server=n -javaagent:/Users/manjitshakya/Library/Caches/JetBrains/IntelliJIdea2021.2/captureAgent/debugger-agent.jar -Dfile.encoding=UTF-8 com.nepalaya.jdbcdemo.controller.StudentController
 
 Host: MacBookPro17,1 x86_64 2400 MHz, 8 cores, 16G, Darwin 20.6.0
 Time: Thu Oct  7 20:15:16 2021 +0545 elapsed time: 97.250858 seconds (0d 0h 1m 37s)
@@ -30,8 +30,8 @@ V  [libjvm.dylib+0x7a12a1]  VMError::report_and_die(Thread*, void*, char const*,
 V  [libjvm.dylib+0x26c57a]  report_fatal(char const*, int, char const*, ...)+0xb5
 V  [libjvm.dylib+0x61a115]  Method::orig_bytecode_at(int) const+0xb3
 V  [libjvm.dylib+0x3a37f1]  InterpreterRuntime::get_original_bytecode_at(JavaThread*, Method*, unsigned char*)+0x33
-j  com.nepalaya.jdbc.service.impl.StudentServiceImpl.getAll()Lcom/nepalaya/jdbc/response/Response;+22
-j  com.nepalaya.jdbc.StudentController.main([Ljava/lang/String;)V+9
+j  com.nepalaya.jdbcdemo.service.impl.StudentServiceImpl.getAll()Lcom/nepalaya/jdbc/response/Response;+22
+j  com.nepalaya.jdbcdemo.controller.StudentController.main([Ljava/lang/String;)V+9
 v  ~StubRoutines::call_stub
 V  [libjvm.dylib+0x3a8fdc]  JavaCalls::call_helper(JavaValue*, methodHandle const&, JavaCallArguments*, Thread*)+0x21c
 V  [libjvm.dylib+0x3ed519]  jni_invoke_static(JNIEnv_*, JavaValue*, _jobject*, JNICallType, _jmethodID*, JNI_ArgumentPusher*, Thread*)+0x11c
@@ -42,8 +42,8 @@ C  [libsystem_pthread.dylib+0x68fc]  _pthread_start+0xe0
 C  [libsystem_pthread.dylib+0x2443]  thread_start+0xf
 
 Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
-j  com.nepalaya.jdbc.service.impl.StudentServiceImpl.getAll()Lcom/nepalaya/jdbc/response/Response;+22
-j  com.nepalaya.jdbc.StudentController.main([Ljava/lang/String;)V+9
+j  com.nepalaya.jdbcdemo.service.impl.StudentServiceImpl.getAll()Lcom/nepalaya/jdbc/response/Response;+22
+j  com.nepalaya.jdbcdemo.controller.StudentController.main([Ljava/lang/String;)V+9
 v  ~StubRoutines::call_stub
 
 ---------------  P R O C E S S  ---------------
@@ -753,7 +753,7 @@ Dynamic libraries:
 
 VM Arguments:
 jvm_args: -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCIProduct -XX:-UnlockExperimentalVMOptions -XX:ThreadPriorityPolicy=1 -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:64697,suspend=y,server=n -javaagent:/Users/manjitshakya/Library/Caches/JetBrains/IntelliJIdea2021.2/captureAgent/debugger-agent.jar -Dfile.encoding=UTF-8 
-java_command: com.nepalaya.jdbc.StudentController
+java_command: com.nepalaya.jdbcdemo.controller.StudentController
 java_class_path (initial): /Users/manjitshakya/playground/jdbc/target/classes:/Users/manjitshakya/.m2/repository/org/projectlombok/lombok/1.18.20/lombok-1.18.20.jar:/Users/manjitshakya/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.13.0-rc2/jackson-core-2.13.0-rc2.jar:/Users/manjitshakya/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.13.0-rc2/jackson-databind-2.13.0-rc2.jar:/Users/manjitshakya/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.13.0-rc2/jackson-annotations-2.13.0-rc2.jar:/Users/manjitshakya/.m2/repository/mysql/mysql-connector-java/8.0.24/mysql-connector-java-8.0.24.jar:/Users/manjitshakya/.m2/repository/com/google/protobuf/protobuf-java/3.11.4/protobuf-java-3.11.4.jar:/Users/manjitshakya/.m2/repository/org/postgresql/postgresql/42.2.23/postgresql-42.2.23.jar:/Users/manjitshakya/.m2/repository/org/checkerframework/checker-qual/3.5.0/checker-qual-3.5.0.jar:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar
 Launcher Type: SUN_STANDARD
 

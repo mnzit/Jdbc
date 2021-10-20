@@ -1,0 +1,8 @@
+package com.nepalaya.jdbcdemo.db;
+
+import java.sql.ResultSet;
+
+public interface RowMapper<T> {
+
+    T map(ResultSet resultSet) throws Exception;
+}
