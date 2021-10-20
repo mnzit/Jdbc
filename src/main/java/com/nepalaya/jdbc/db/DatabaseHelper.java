@@ -17,7 +17,7 @@ public class DatabaseHelper {
 
     public PreparedStatement initialize(String sql) throws Exception {
         preparedStatement = connection.prepareStatement(sql);
-        return connection.prepareStatement(sql);
+        return preparedStatement;
     }
 
     public int update() throws Exception {
